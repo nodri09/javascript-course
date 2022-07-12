@@ -25,3 +25,45 @@ function sum_numbers(...args){
 
 console.log("\nTask 2. \nPrint out sum of all the args of the function.")
 sum_numbers(10, 50, 6, 7, 8, 11, 6, 3, 9);
+
+// Task 3.
+// Function should return first and last names if 'loggedin' is True and false if 'loggedin' is false
+
+let user = {
+    firstName: 'Giorgi',
+    lastName: 'Saakadze',
+    age: 32,
+    isloggedin: true
+}
+
+function user_loggedin (user_obj) {
+    if (user_obj.isloggedin === true) {
+        return `${user_obj.firstName} ${user_obj.lastName}`;
+    } else {
+        return false;
+    }
+}
+
+console.log("\nTask 3. \nReturn first and last names if 'loggedin' is True and false if 'loggedin' is false:")
+console.log(user_loggedin(user));
+
+// Task 4. 
+// Create function that takes array as an argument and returns highest number from the array
+let numbers = [2, 0, -5, 20, 10, 10, 14, 5, 100, 900, 1]
+
+function highest_number(num_array) {
+    let highsetNum = 0;
+
+    for (i = 0; i < num_array.length; i++) {
+        if (num_array[i] > num_array[i + 1]) {
+            if (highsetNum < num_array[i]){
+                highsetNum = num_array[i]
+            }
+        }
+    }
+
+    return highsetNum;
+}
+
+console.log("\nTask 4. \nCreate function that takes array as an argument and returns highest number from the array");
+console.log(highest_number(numbers));
